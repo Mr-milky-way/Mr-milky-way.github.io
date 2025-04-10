@@ -1,12 +1,10 @@
-
-
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
 
 function GetLatAndLong() {
     la = getRandomArbitrary(-90, 90);
-    lon = getRandomArbitrary(-90, 90);
+    lon = getRandomArbitrary(-180, 180);
     GetLoc(la, lon);
     document.getElementById("lat").innerHTML = "Lat = " + la;
     document.getElementById("long").innerHTML = "Long = " + lon;
@@ -34,15 +32,11 @@ function GetLoc(lat, long) {
                 console.log("Country Name:", countryName);
                 console.log("Country Code:", countryCode);
             } else {
-                console.warn("Could not extract country information from XML");
+                console.log("In the ocean");
                 GetLatAndLong();
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            if (typeof GetLatAndLong === 'function') {
-                GetLatAndLong();
-            }
-            alert(error);
         });
 }
