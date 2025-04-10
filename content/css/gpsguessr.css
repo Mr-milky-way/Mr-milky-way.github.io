@@ -2,9 +2,25 @@ body {
     background-color: rgb(5, 0, 50);
     color: white;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    transition: scale 0.5s;
+}
+
+header:hover {
+    scale: 1.10;
 }
 
 .Cords {
-    border-radius: 5rem;
-    background-color: rgb(5, 0, 50);
+    transition: scale 0.5s;
+}
+
+.Cords:hover {
+    scale: 1.05;
+    display: inline-block;
 }
