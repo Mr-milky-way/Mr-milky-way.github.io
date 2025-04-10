@@ -10,12 +10,21 @@
 
 <body>
     <header>
-        <H1>GPSGuessr</H1>
+        <img src="/content/img/gpsguessr/GPS.png" alt="GPSGuessr">
     </header>
+
     <div class="Cords">
-        <h1 id="lat">long</h1>
-        <h1 id="long">lat</h1>
+        <h1 id="lat">Long</h1>
+        <h1 id="long">Lat</h1>
+        <h1 id="GuessNumber">Tries left: 3</h1>
+        <h1 id="RightCounter">Number Right: 0</h1>
+    </div>
+    
+    <button onclick="GetLatAndLong();">Pick Rand</button>
+    
+    <div class="Inputwraper">
+            <input type="text" id="input" text-input="" placeholder="Guess">
     </div>
 
-    <button onclick="GetLatAndLong();">Pick Rand</button>
+    <button onclick="guess();">Guess</button>
 </body>

@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(5, 0, 50);
+    color: white;
+    text-align: center;
+}
+
+.Cords {
+    border-radius: 5rem;
+    background-color: rgb(5, 0, 50);
+}
