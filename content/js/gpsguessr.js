@@ -1,5 +1,6 @@
 let country = "";
 triesLeft = 2;
+resetTo = 2;
 numberRight = 0;
 
 function getRandomArbitrary(min, max) {
@@ -17,6 +18,10 @@ async function GetLatAndLong() {
         document.getElementById("lat").innerHTML = "Lat = " + la;
         document.getElementById("long").innerHTML = "Long = " + lon;
     }
+    triesLeft = resetTo;
+    numberRight = 0;
+    document.getElementById("RightCounter").innerHTML = `Number Right: ${numberRight}`;
+    document.getElementById("GuessNumber").innerHTML = `Tries left: ${triesLeft + 1}`;
 }
 
 
@@ -32,11 +37,12 @@ function GetLoc(lat, long) {
         })
         .then(data => {
             if (data && data.countryName && data.countryCode) {
-                console.log("Country Name:", data.countryName);
-                console.log("Country Code:", data.countryCode);
                 countryName = data.countryName;
-            } else {
-                console.log("In the ocean");
+            } else if (data.status.value = 19)
+            {
+                alert("We are down RN sorry");
+            }
+            else {
                 countryName = "ocean";
                 GetLatAndLong();
             }
@@ -52,17 +58,20 @@ function GetLoc(lat, long) {
 function guess() {
     country = GetLoc(la, lon);
     input = document.getElementById("input").value;
+    document.getElementById("input").value = "";
     if (input.toLowerCase() === country.toLowerCase()) {
         alert("Right On");
         GetLatAndLong();
-        triesLeft = 2;
+        triesLeft = resetTo;
         numberRight += 1;
         document.getElementById("RightCounter").innerHTML = `Number Right: ${numberRight}`;
     } else {
         alert("Nope")
         if (triesLeft <= 0) {
             GetLatAndLong();
-            triesLeft = 2;
+            triesLeft = resetTo;
+            numberRight = 0;
+            document.getElementById("RightCounter").innerHTML = `Number Right: ${numberRight}`;
             document.getElementById("GuessNumber").innerHTML = `Tries left: ${triesLeft + 1}`;
         } else {
             triesLeft -= 1;

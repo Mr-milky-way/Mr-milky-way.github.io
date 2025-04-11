@@ -6,13 +6,14 @@
     <title>GPSGuessr</title>
     <link rel="stylesheet" href="/content/css/gpsguessr.css">
     <script src="/content/js/gpsguessr.js"></script>
+    <link rel="icon" type="image/x-icon" href="/content/img/gpsguessr/gg-pin.svg">
 </head>
 
-<body>
+<body onload="GetLatAndLong();">
     <header>
-        <img src="/content/img/gpsguessr/GPS.png" alt="GPSGuessr">
+        <a href="/"><img src="/content/img/gpsguessr/gg-pin.svg" alt="GEOGuessr pin" class="LogoPin"></a>
     </header>
-
+    <img src="/content/img/gpsguessr/GPS.png" alt="GPSGuessr" class="Logo">
     <div class="Cords">
         <h1 id="lat" class="lat">Long</h1>
         <h1 id="long" class="long">Lat</h1>
@@ -20,7 +21,7 @@
         <h1 id="RightCounter" class="RC">Number Right: 0</h1>
     </div>
     
-    <button onclick="GetLatAndLong();">Pick Rand</button>
+    <button onclick="GetLatAndLong();">Pick New Cords</button>
     
     <div class="Inputwraper">
             <input type="text" id="input" text-input="" placeholder="Guess">

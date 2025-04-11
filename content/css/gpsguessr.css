@@ -1,5 +1,9 @@
+:root {
+    --bgMain: rgb(7, 0, 75);
+}
+
 body {
-    background-color: rgb(5, 0, 50);
+    background-color: var(--bgMain);
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -8,19 +12,72 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    transition: scale 0.5s;
+.Logo {
+    transition: scale 0.3s;
 }
 
-header:hover {
+.Logo:hover {
+    scale: 1.1;
+}
+
+.LogoPin {
+    align-self: flex-start;
+    top: 30 px;
+    left: 30 px;
+    display: flex;
+    width: 2.5%;
+    position: fixed;
+    transition: scale 0.3s;
+}
+
+.LogoPin:hover {
     scale: 1.10;
 }
 
-.Cords {
-    transition: scale 0.5s;
+
+.Cords h1 {
+    transition: scale 0.3s;
 }
 
-.Cords:hover {
-    scale: 1.05;
-    display: inline-block;
+.Cords h1:hover {
+    scale: 1.1;
+}
+
+button {
+    color: #fff;
+    background-color: var(--bgMain);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border-width: 0px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+button:hover {
+    background-color: #004573;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.Inputwraper input {
+    padding: 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: whitesmoke;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.Inputwraper input:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
