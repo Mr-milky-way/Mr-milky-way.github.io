@@ -2,6 +2,10 @@
     --bgMain: rgb(7, 0, 75);
 }
 
+.hide {
+    display: none;
+}
+
 body {
     background-color: var(--bgMain);
     color: white;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,44 @@
     <link rel="icon" type="image/x-icon" href="/content/img/gpsguessr/gg-pin.svg">
 </head>
 
-<body onload="GetLatAndLong();">
+<body onload="hidemodes();">
     <header>
         <a href="/"><img src="/content/img/gpsguessr/gg-pin.svg" alt="GEOGuessr pin" class="LogoPin"></a>
+        <img src="/content/img/gpsguessr/GPS.png" alt="GPSGuessr" class="Logo">
     </header>
-    <img src="/content/img/gpsguessr/GPS.png" alt="GPSGuessr" class="Logo">
-    <div class="Cords">
-        <h1 id="lat" class="lat">Long</h1>
-        <h1 id="long" class="long">Lat</h1>
-        <h1 id="GuessNumber" class="GN">Tries left: 3</h1>
-        <h1 id="RightCounter" class="RC">Number Right: 0</h1>
+    <div id="modeSet">
+        <button onclick="unhidemode1();">Mode 1</button>
+        <button onclick="unhidemode2();">Mode 2</button>
     </div>
-    
-    <button onclick="GetLatAndLong();">Pick New Cords</button>
-    
-    <div class="Inputwraper">
-            <input type="text" id="input" text-input="" placeholder="Guess">
-    </div>
+    <div id="Mode1">
+        <div class="Cords">
+            <h1 id="lat" class="lat">Lat</h1>
+            <h1 id="long" class="long">Long</h1>
+            <h1 id="GuessNumber" class="GN">Tries left: 3</h1>
+            <h1 id="RightCounter" class="RC">Number Right: 0</h1>
+        </div>
 
-    <button onclick="guess();">Guess</button>
+        <button onclick="GetLatAndLongNew();">Pick New Cords</button>
+
+        <div class="Inputwraper">
+            <input type="text" id="input" text-input="" placeholder="Guess">
+        </div>
+
+        <button onclick="Mode1guess();">Guess</button>
+    </div>
+    <div id="Mode2">
+        <div class="Cords">
+            <h1 id="Country" class="Country">Country: </h1>
+            <div class="Inputwraper">
+                <h1 id="lat" class="lat">Lat: <input type="text" id="latInput" text-input="" placeholder="Lat"></h1>
+                <h1 id="long" class="long">Long: <input type="text" id="longInput" text-input="" placeholder="Long"></h1>
+            </div>
+            <h1 id="GuessNumber" class="GN">Tries left: 3</h1>
+            <h1 id="RightCounter" class="RC">Number Right: 0</h1>
+        </div>
+
+        <button onclick="PickNew();">Pick New Country</button>
+
+        <button onclick="Mode2guess();">Guess</button>
+    </div>
 </body>
