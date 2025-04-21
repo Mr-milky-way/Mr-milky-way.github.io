@@ -2,10 +2,6 @@
     --bgMain: rgb(7, 0, 75);
 }
 
-.hide {
-    display: none;
-}
-
 body {
     background-color: var(--bgMain);
     color: white;
@@ -84,4 +80,20 @@ button:hover {
     outline: none;
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    padding: 1rem;
+    color: whitesmoke;
+    margin-top: 3rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
 }

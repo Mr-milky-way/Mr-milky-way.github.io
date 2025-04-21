@@ -10,15 +10,11 @@
     <link rel="icon" type="image/x-icon" href="/content/img/gpsguessr/gg-pin.svg">
 </head>
 
-<body onload="hidemodes();">
+<body onload="GETAltname(Afghanistan,10);">
     <header>
         <a href="/"><img src="/content/img/gpsguessr/gg-pin.svg" alt="GEOGuessr pin" class="LogoPin"></a>
         <img src="/content/img/gpsguessr/GPS.png" alt="GPSGuessr" class="Logo">
     </header>
-    <div id="modeSet">
-        <button onclick="unhidemode1();">Mode 1</button>
-        <button onclick="unhidemode2();">Mode 2</button>
-    </div>
     <div id="Mode1">
         <div class="Cords">
             <h1 id="lat" class="lat">Lat</h1>
@@ -35,19 +31,14 @@
 
         <button onclick="Mode1guess();">Guess</button>
     </div>
-    <div id="Mode2">
-        <div class="Cords">
-            <h1 id="Country" class="Country">Country: </h1>
-            <div class="Inputwraper">
-                <h1 id="lat" class="lat">Lat: <input type="text" id="latInput" text-input="" placeholder="Lat"></h1>
-                <h1 id="long" class="long">Long: <input type="text" id="longInput" text-input="" placeholder="Long"></h1>
-            </div>
-            <h1 id="GuessNumber" class="GN">Tries left: 3</h1>
-            <h1 id="RightCounter" class="RC">Number Right: 0</h1>
-        </div>
-
-        <button onclick="PickNew();">Pick New Country</button>
-
-        <button onclick="Mode2guess();">Guess</button>
-    </div>
+    <br>
+    <br>
+    <h4 class="HTP">
+        <h3>How to play</h3><br />
+        First you want to generate new cords with the button "Pick New Cords". Then you enter where you think the cords are in the text box, this can be the country code (for the United States it would be US for United Kingdom GB) or the name of the country (some nicknames work some don't). <br>
+    </h4>
+    <footer>
+        <a href="/privacy-policy">Privacy Policy</a><br>
+        <a href="/feedback-form/">Feedback</a>
+    </footer>
 </body>

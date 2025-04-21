@@ -1,0 +1,83 @@
+body {
+    background-color: #1a1526;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.home {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-size: 5rem;
+    color: white;
+    align-self: flex-start;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Text {
+    font-family: 'Inter';
+    font-size: 2rem;
+}
+
+.name {
+    font-family: 'Inter';
+    width: 80%;
+    resize: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.name:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.email {
+    font-family: 'Inter';
+    width: 80%;
+    resize: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.email:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.textarea {
+    font-family: 'Inter';
+    width: 80%;
+    resize: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.textarea:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.submit {
+    width: 80%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    align-self: center;
+    background-color: #FFB545FF;
+    color: black;
+}
