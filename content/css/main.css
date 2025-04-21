@@ -5,6 +5,17 @@ body {
     overflow: hidden;
 }
 
+.home {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-size: 4rem;
+    color: white;
+    align-self: flex-start;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+}
+
 header {
     font-family: "Audiowide", sans-serif;
     text-align: center;
