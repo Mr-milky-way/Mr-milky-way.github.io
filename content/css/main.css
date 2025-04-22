@@ -1,8 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     color: #ffffff;
     background-color: #1a1526;
-    width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .home {
@@ -10,19 +21,20 @@ body {
     font-family: 'Inter';
     font-size: 4rem;
     color: white;
-    align-self: flex-start;
-    top: 1rem;
-    left: 1rem;
+    align-self:self-start;
     display: flex;
 }
 
 header {
     font-family: "Audiowide", sans-serif;
     text-align: center;
+    padding: 3rem;
 }
 
 .apps {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
 }
 
 .app {
@@ -31,12 +43,14 @@ header {
     margin-right: auto;
     border: 5px solid #2f2a3b;
     border-radius: 1rem;
+    width: 100%;
+    max-width: 12000px;
     background-color: rgb(7, 0, 75);
     transition: scale 0.3s;
 }
 
 .app:hover {
-    scale: 1.1;
+    scale: 1.05;
 }
 
 .policy {
@@ -45,15 +59,13 @@ header {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 110%;
+    margin-top: 3rem;
     text-align: center;
     background-color: #2f2a3b;
-    padding: 1rem;
     color: whitesmoke;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    margin-top: 3rem;
 }
 
 footer a {
