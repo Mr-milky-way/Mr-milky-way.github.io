@@ -63,7 +63,7 @@ function Run() {
         return;
     }
     allNumbers.push(current);
-    setTimeout(Run, 1);
+    setTimeout(Run, 50);
 }
 
 
