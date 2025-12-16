@@ -6,13 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPSGuessr</title>
     <link rel="stylesheet" href="/content/css/gpsguessr.css">
+    <link rel="stylesheet" href="/content/css/menu.css">
     <script src="/content/js/gpsguessr.js"></script>
+    <script src="/content/js/menu.js"></script>
     <link rel="icon" type="image/x-icon" href="/content/img/gpsguessr/gg-pin.svg">
 </head>
 
 <body>
+    <div id="nav">
+        <span style="font-size:30px;cursor:pointer" onclick="openMenu()">&#9776;
+        </span>
+    </div>
+    <div id="menu">
+        <div id="closebtn">
+            <span style="font-size:36px;cursor:pointer" onclick="closeMenu()">&times;
+            </span>
+        </div>
+        <div id="menu-items">
+            <a href="/" class="menu-item">Projects</a>
+            <a href="/feedback-form/" class="menu-item">Feedback</a>
+            <a href="/About/" class="menu-item">About Me</a>
+        </div>
+        <div id="menu-background-pattern"></div>
+    </div>
     <header>
-        <a href="/"><img src="/content/img/gpsguessr/gg-pin.svg" alt="GEOGuessr pin" class="LogoPin"></a>
         <img src="/content/img/gpsguessr/GPS.png" alt="GPSGuessr" class="Logo">
     </header>
     <div id="Mode1">
@@ -37,8 +54,4 @@
         <h3>How to play</h3><br />
         First you want to generate new cords with the button "Pick New Cords". Then you enter where you think the cords are in the text box, this can be the country code (for the United States it would be US for United Kingdom GB) or the name of the country (some nicknames work some don't). <br>
     </h4>
-    <footer>
-        <a href="/privacy-policy">Privacy Policy</a><br>
-        <a href="/feedback-form/">Feedback</a>
-    </footer>
 </body>
