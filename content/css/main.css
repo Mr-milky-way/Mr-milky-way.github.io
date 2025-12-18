@@ -33,17 +33,19 @@ header {
 
 .apps {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
 .app {
+    overflow: hidden;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border: 5px solid #2f2a3b;
     border-radius: 1rem;
     width: 100%;
+    height: 90%;
     max-width: 12000px;
     background-color: rgb(7, 0, 75);
     transition: scale 0.3s;

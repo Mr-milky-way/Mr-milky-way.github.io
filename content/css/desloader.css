@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #ffffff;
+    background-color: #1a1526;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header {
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    padding: 3rem;
+}
+
+h2 {
+    font-family: "Audiowide", sans-serif;
+    padding: 1rem;
+}
+
+h3 {
+    font-family: "Audiowide", sans-serif;
+}
+
+h3 a {
+    text-decoration: none;
+    color: #dadada;
+}
