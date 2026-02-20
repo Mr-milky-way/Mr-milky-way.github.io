@@ -1,0 +1,46 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=473033c3b7c540858daec9a483b9f446"></script>
+    <title>Mr Milky Way || Desloader Testing</title>
+    <link rel="icon" type="image/x-icon" href="/content/img/main/favicon.ico">
+    <link rel="stylesheet" href="/content/css/desloaderTestingCalc.css">
+    <link rel="stylesheet" href="/content/css/menu.css">
+    <script src="/content/js/desloaderTesting.js"></script>
+    <script src="/content/js/menu.js"></script>
+</head>
+
+<body>
+        <header>
+        <div id="nav">
+            <span style="font-size:30px;cursor:pointer" onclick="openMenu()">&#9776;
+            </span>
+        </div>
+        <div id="menu">
+            <div id="closebtn">
+                <span style="font-size:36px;cursor:pointer" onclick="closeMenu()">&times;
+                </span>
+            </div>
+            <div id="menu-items">
+                <a href="/" class="menu-item">Projects</a>
+                <a href="/feedback-form/" class="menu-item">Feedback</a>
+                <a href="/About/" class="menu-item">About Me</a>
+            </div>
+            <div id="menu-background-pattern"></div>
+        </div>
+        <div id="buttoncontainer">
+            <button onclick="buttonclick()"><b>RUN</b></button>
+        </div>
+    </header>
+    <main>
+        <div id="editor"></div>
+        <div class="Calc" id="Calc"></div>
+        <script>
+            var elt = document.getElementById('Calc');
+            Calc = Desmos.GraphingCalculator(elt);
+        </script>
+    </main>
+    <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="/content/js/desloaderTestingCalc.js"></script>
+</body>
